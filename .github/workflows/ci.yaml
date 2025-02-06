@@ -20,9 +20,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           labels: |
-            maintainer=The Dockage Developers
+            maintainer=The Dockage Developers & nishizhen
           images: |
-            dockage/tor-privoxy
+            nishizhen/tor-privoxy
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=ref,event=pr
