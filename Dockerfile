@@ -7,6 +7,8 @@ RUN apk --no-cache --update --upgrade add privoxy
 RUN apk --no-cache --update --upgrade add socat
 RUN apk --no-cache --update --upgrade add go
 RUN apk --no-cache --update --upgrade add git
+RUN apk --no-cache --update --upgrade add gcc
+RUN apk --no-cache --update --upgrade add musl-dev
 
 RUN mv /etc/tor/torrc.sample /etc/tor/torrc
 RUN mv /etc/privoxy/config.new /etc/privoxy/config
