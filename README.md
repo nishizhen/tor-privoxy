@@ -8,7 +8,7 @@ Add obfs4proxy.
   - Can use obfs4 bridges
   ```
 UseBridges 1
-ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
+ClientTransportPlugin obfs4 exec /usr/local/bin/obfs4proxy
 Bridge obfs4 [bridge address 1]
 Bridge obfs4 [bridge address 2]
 Bridge obfs4 [bridge address 3]
