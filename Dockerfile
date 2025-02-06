@@ -3,7 +3,7 @@ FROM dockage/alpine:3.19-openrc
 COPY assets/root/ /
 
 RUN apk --no-cache --update --upgrade add tor privoxy socat go git \
-    && mv /etc/tor/torrc.sample  /etc/tor/torrc \
+    && mv /etc/tor/torrc.sample /etc/tor/torrc \
     && mv /etc/privoxy/config.new /etc/privoxy/config \
     && mv /etc/privoxy/default.action.new /etc/privoxy/default.action \
     && mv /etc/privoxy/user.action.new /etc/privoxy/user.action \
@@ -23,8 +23,8 @@ RUN apk --no-cache --update --upgrade add tor privoxy socat go git \
     && rc-update add tor \
     && rc-update add privoxy \
     && rc-update add socat \
-    && go install github.com/Yawning/obfs4/obfs4proxy@latest \
-    && mkdir -p /usr/local/bin \
-    && cp /root/go/bin/obfs4proxy /usr/local/bin/obfs4proxy
+    && git clone git@gitlab.com:yawning/obfs4.git \
+    && cd obfs4 \
+    && go build -o /usr/local/bin/obfs4proxy ./obfs4proxy
 
 EXPOSE 9050/tcp 9051/tcp 8118/tcp
