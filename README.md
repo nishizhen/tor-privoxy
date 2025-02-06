@@ -2,6 +2,11 @@
 
 This image combines Tor and Privoxy services to prepare proxy connection for http and shell.
 
+## Difference with orgin
+
+Add obfs4proxy.
+  - Can use obfs4 bridges
+
 ## Contributing
 
 If you find this image useful here's how you can help:
