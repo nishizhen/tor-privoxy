@@ -23,7 +23,7 @@ RUN apk --no-cache --update --upgrade add tor privoxy socat go git \
     && rc-update add tor \
     && rc-update add privoxy \
     && rc-update add socat \
-    && go install github.com/Yawning/obfs4.git/obfs4proxy@latest \
+    && go install github.com/Yawning/obfs4/obfs4proxy@latest \
     && mkdir -p /usr/local/bin \
     && cp /root/go/bin/obfs4proxy /usr/local/bin/obfs4proxy
 
