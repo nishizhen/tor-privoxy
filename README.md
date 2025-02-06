@@ -2,7 +2,7 @@
 
 This image combines Tor and Privoxy services to prepare proxy connection for http and shell.
 
-## Difference with orgin
+## Difference with dockage/tor-privoxy
 
 Add obfs4proxy.
   - Can use obfs4 bridges
