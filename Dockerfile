@@ -27,7 +27,7 @@ RUN rc-update add tor
 RUN rc-update add privoxy
 RUN rc-update add socat
 
-RUN git clone git@gitlab.com:yawning/obfs4.git
+RUN git clone https://gitlab.com/yawning/obfs4.git
 WORKDIR obfs4
 RUN go build -o /usr/local/bin/obfs4proxy ./obfs4proxy
 
