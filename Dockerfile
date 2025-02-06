@@ -2,7 +2,7 @@ FROM dockage/alpine:3.19-openrc
 
 COPY assets/root/ /
 
-RUN apk --no-cache --update --upgrade add tor privoxy socat obfs4proxy \  # Add obfs4proxy here
+RUN apk --no-cache --update --upgrade add tor privoxy socat obfs4proxy \
     && mv /etc/tor/torrc.sample  /etc/tor/torrc \
     && mv /etc/privoxy/config.new /etc/privoxy/config \
     && mv /etc/privoxy/default.action.new /etc/privoxy/default.action \
